@@ -20,7 +20,7 @@ const GithubRepos = ({dark, updateDark}) => {
             try {
                 const response = await axios.get('https://api.github.com/user/repos', {
                     headers: {
-                        Authorization: 'Bearer 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',
+                        Authorization: 'Bearer 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',
                     },
                 });
                 setRepos(response.data);
