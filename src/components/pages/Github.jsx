@@ -15,12 +15,13 @@ const GithubRepos = ({dark, updateDark}) => {
     const [repos, setRepos] = useState([]);
     const [loading, setLoading] = useState(true);
     document.title = "Yelmouss - Github";
+    // console.log(process.env.REACT_APP_GIT)
     useEffect(() => {
         const fetchRepos = async () => {
             try {
                 const response = await axios.get('https://api.github.com/user/repos', {
                     headers: {
-                        Authorization: 'Bearer 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',
+                        Authorization: `Bearer ${process.env.REACT_APP_GIT}`,
                     },
                 });
                 setRepos(response.data);
