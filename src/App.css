@@ -1,38 +1,196 @@
-.App {
-  text-align: center;
+@import url("https://unpkg.com/leaflet@1.6.0/dist/leaflet.css");
+
+:root {
+  --mycolor: #64ffda;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: url('./img/wave-haikei.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.borderMycolor {
+  border: 5px solid #64ffda;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+* {
+  margin: 0;
+}
+
+/* .footer{
+  position: relative;
+  bottom: 0;
+  width: 100%;
+} */
+.leaflet-container {
+  width: 100%;
+  height: 250px;
+}
+
+.ColorFLuo {
+  color: var(--mycolor);
+}
+
+.email-link:hover {
+  transform: translate(5px, -10px);
+  box-shadow: -10px 10px 8px -1px var(--mycolor);
+  -webkit-box-shadow: -10px 10px 8px -1px var(--mycolor);
+  -moz-box-shadow: -10px 10px 8px -1px var(--mycolor);
+}
+
+.vertical-line {
+  height: 39vh;
+  /* Hauteur de la ligne égale à la hauteur de la fenêtre */
+  width: 2px;
+  /* Largeur de la ligne */
+  background-color: var(--mycolor);
+  /* Couleur de la ligne */
+  position: fixed;
+  /* La ligne reste fixe même en faisant défiler la page */
+  left: 2%;
+  /* Position à gauche de la fenêtre */
+  top: 20%;
+  /* Position en haut de la fenêtre */
+}
+
+/* Icônes de réseaux sociaux */
+.social-icons {
+  position: fixed;
+  /* Les icônes restent fixées même en faisant défiler la page */
+  left: 1.5%;
+  /* Marge de 10 pixels à partir de la gauche */
+  top: 75%;
+  /* Centrage vertical des icônes */
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* Ajustement pour centrer verticalement */
 }
 
-.App-link {
-  color: #61dafb;
+/* Styles pour les icônes (à adapter selon le framework/iconset utilisé) */
+/* Styles pour les icônes (utilisation de la classe social-icon) */
+.social-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #64ffda;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.text-fun-pink:hover {
+  color: var(--mycolor);
+  transition: top ease 0.5s;
+}
+
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #075e54;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1;
+}
+
+.my-float {
+  margin-top: 7px;
+}
+
+
+.email-link {
+  color: var(--mycolor);
+  background-color: transparent;
+  border: 1px solid var(--mycolor);
+  border-radius: var(--border-radius);
+  padding: 1.25rem 1.75rem;
+
+  line-height: 1;
+  text-decoration: none;
+
+  margin-top: 50px;
+}
+
+.hori-timeline .events {
+  border-top: 3px solid #e9ecef;
+}
+
+.hori-timeline .events .event-list {
+  display: block;
+  position: relative;
+  text-align: center;
+  padding-top: 70px;
+  margin-right: 0;
+}
+
+.hori-timeline .events .event-list:before {
+  content: "";
+  position: absolute;
+  height: 36px;
+  border-right: 2px dashed #dee2e6;
+  top: 0;
+}
+
+.hori-timeline .events .event-list .event-date {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  right: 0;
+  width: 75px;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+@media (min-width: 1140px) {
+  .hori-timeline .events .event-list {
+    display: inline-block;
+    width: 24%;
+    padding-top: 45px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hori-timeline .events .event-list .event-date {
+    top: -12px;
   }
+}
+
+
+.ExpImg {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.text-soulign {
+
+  text-decoration: none;
+  padding: 0;
+  border-bottom: 2px solid var(--mycolor);
+
+}
+
+.objectfit{
+  object-fit: cover;
+}
+
+
+.swiper {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, transparent, #0006);
 }
