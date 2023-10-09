@@ -15,7 +15,7 @@ const GithubRepos = ({dark, updateDark}) => {
     const [repos, setRepos] = useState([]);
     const [loading, setLoading] = useState(true);
     document.title = "Yelmouss - Github";
-    // console.log(process.env.REACT_APP_GIT)
+    console.log(process.env.REACT_APP_GIT)
     useEffect(() => {
         const fetchRepos = async () => {
             try {
