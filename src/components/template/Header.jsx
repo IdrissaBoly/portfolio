@@ -127,7 +127,7 @@ const Header = ({ dark, updateDark }) => {
               {/* <Link to={'./Instagram'} className='nav-link text-center'>   <BsInstagram />  <br />  Insta Api</Link> */}
             </Nav>
             <Nav>
-              <Nav.Link href="#memes">By Yass Elmouss</Nav.Link>
+              <Nav.Link href="#memes">By Idriss Ledoux  </Nav.Link>
 
               <Nav.Link
                 onClick={() =>
